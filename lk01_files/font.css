@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'SFProDisplay-Bold';
+  src: url('http://main.webuspex38.ru/SFProDisplay-Bold.eot');
+  src: url('http://main.webuspex38.ru/SFProDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+       url('http://main.webuspex38.ru/SFProDisplay-Bold.svg#SFProDisplay-Bold') format('svg'),
+       url('http://main.webuspex38.ru/SFProDisplay-Bold.ttf') format('truetype'),
+       url('http://main.webuspex38.ru/SFProDisplay-Bold.woff') format('woff'),
+       url('http://main.webuspex38.ru/SFProDisplay-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
