@@ -28,9 +28,21 @@
 
     <link rel="shortcut icon" href="https://xn--90abjb3clnt.xn--p1ai/favicon32.ico" type="image/x-icon">
     <link rel="icon" href="https://xn--90abjb3clnt.xn--p1ai/favicon32.ico" type="image/x-icon">
+
+    <style>
+        .tile-many-lines,
+        .text-many-lines {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- 
+		add class "lk-side-active" to active side-panel (tasks list) and deactivate content panel
+		<div class="wrap lk-side-active">
+		-->
     <div class="wrap">
         <!-- header -->
         <header class="header">
@@ -146,7 +158,7 @@
                 <!-- /row menu -->
                 <!-- row title -->
                 <div class="row row-title">
-                    <div class="back-inner-wrap">
+                    <div class="back-inner-wrap elm-hidden-desktop">
                         <a href="" class="btn button-lk button-lk-second">
                             <div class="button-ico">
                                 <img src="./img/icons/arrow-back-lk.svg" alt="">
@@ -155,7 +167,7 @@
                         </a>
                     </div>
                     <div class="title-inner-wrap">
-                        <div class="title-inner">Добавление подзадачи по проекту Сайтсназванием</div>
+                        <div class="title-inner">Чаты</div>
                     </div>
                     <div class="search-inner-wrap js-popup-wrap">
                         <a href="" class="btn-popup btn-action-ico ico-search-lk js-btn-toggle"></a>
@@ -166,14 +178,6 @@
                             </form>
                         </div>
                     </div>
-                    <div class="button-add-wrap">
-                        <a href="" class="btn button-lk">
-                            <div class="button-title">Добавить проект</div>
-                            <div class="button-ico">
-                                <img src="./img/icons/plus-lk.svg" alt="">
-                            </div>
-                        </a>
-                    </div>
                 </div>
                 <!-- /row title -->
             </div>
@@ -183,25 +187,865 @@
         <!-- content -->
 
         <!--lk-outer-wrap-->
-        <div class="lk-outer-wrap">
+        <div class="lk-outer-wrap side-lk">
 
             <div class="container">
 
-                <!--lk-title-box-->
-                <div class="lk-title-box">
-                    <h1 class="lk-title-main">Информация по проекту:</h1>
-                </div>
-                <!--/lk-title-box-->
-
                 <!--lk-content-wrap-->
                 <div class="lk-content-wrap">
-                    CONTENT
+
+                    <!--lk-tabs-box-->
+                    <div class="lk-tabs-box mb-0">
+                        <ul class="menu">
+                            <li>
+                                <a href="" class="btn button-lk button-lk-tab active">
+                                    Чат по проекту
+                                    <div class="button-ico">
+                                        <img src="./img/icons/notify-lk.svg" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/lk-tabs-box-->
+
+                    <!--lk-content-box-->
+                    <div class="lk-content-box mb-0">
+
+                        <!--lk-section-wrap-->
+                        <div class="lk-section-wrap section-main">
+                            <div class="lk-section-user-wrap">
+                                <div class="elm-photo photo-cover bg-att">
+                                    <img src="./img/user.jpg" alt="">
+                                    <div class="photo-user-title">МА</div>
+                                </div>
+                                <div class="title-inner">Михаил Михайлович Смирнов</div>
+                                <div class="title-inner-info">Был на сайте: 2 дня назад</div>
+                            </div>
+                            <div class="lk-section-content-wrap">
+                                <div class="frm-row">
+                                    <div class="frm-field">
+                                        <div class="frm-field-item">
+                                            <div class="field-title">ID 12345</div>
+                                            <div class="field-content">
+                                                <div class="elm-sticker-lk color-att-dark">В работе</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm-field-item">
+                                            <div class="field-content">
+                                                <div class="field-link"><a href="">Дизайн для электронного лабораторного журнала</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="frm-field">
+                                        <div class="frm-field-item">
+                                            <div class="field-content">
+                                                <div class="field-link">В чате 2 человека:</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm-field-item align-center">
+                                            <div class="field-content">
+                                                <ul class="list">
+                                                    <li>
+                                                        <div class="elm-status-lk color-att-active">Михаил Смирнов</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="elm-status-lk color-online">Вы</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/lk-section-wrap-->
+
+                    </div>
+                    <!--/lk-content-box-->
+
+                    <!--lk-chat-box-->
+                    <div class="lk-chat-box">
+                        <div class="list-inner-wrap lk-scroll-box">
+                            <div class="items-wrap">
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-message tile-att status-readed">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <img src="./img/user.jpg" alt="">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-content-wrap">
+                                            <div class="tile-text-wrap">
+                                                <p>Мартиросова Алена, здравствуйте!</p>
+                                                <p>Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                    ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</p>
+                                                <p>Чем можем быть полезны?</p>
+                                            </div>
+                                            <div class="tile-attach-wrap">
+                                                <div class="frm-row">
+                                                    <div class="frm-field">
+                                                        <div class="frm-field-link">
+                                                            <a href="" class="link-main">ТЗ по разработке ЛК. doc</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="frm-field">
+                                                        <div class="frm-field-link">
+                                                            <a href="" class="link-main">Изображение. jpg</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="frm-field">
+                                                        <div class="frm-field-link">
+                                                            <a href="" class="link-main">Изображение. jpg</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tile-info-wrap">
+                                                <div class="tile-title-inner">19:28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap wrap-inner">
+                                    <div class="item-tile-message status-readed">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-content-wrap">
+                                            <div class="tile-text-wrap">
+                                                <p>Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                    ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</p>
+                                            </div>
+                                            <div class="tile-info-wrap">
+                                                <div class="tile-title-inner">19:28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-message tile-att status-unreaded">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover bg-att-dark">
+                                                <img src="./img/user.jpg" alt="">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-content-wrap">
+                                            <div class="tile-text-wrap">
+                                                <p>Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                    ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</p>
+                                            </div>
+                                            <div class="tile-info-wrap">
+                                                <div class="tile-title-inner">19:28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-message status-readed">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-content-wrap">
+                                            <div class="tile-text-wrap">
+                                                <p>Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                    ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</p>
+                                            </div>
+                                            <div class="tile-info-wrap">
+                                                <div class="tile-title-inner">19:28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-message tile-att status-unreaded">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <img src="./img/user.jpg" alt="">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-content-wrap">
+                                            <div class="tile-text-wrap">
+                                                <p>Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                    ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</p>
+                                            </div>
+                                            <div class="tile-info-wrap">
+                                                <div class="tile-title-inner">19:28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-message status-readed">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-content-wrap">
+                                            <div class="tile-text-wrap">
+                                                <p>Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                    ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</p>
+                                            </div>
+                                            <div class="tile-info-wrap">
+                                                <div class="tile-title-inner">19:28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-message tile-att status-unreaded">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <img src="./img/user.jpg" alt="">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-content-wrap">
+                                            <div class="tile-text-wrap">
+                                                <p>Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                    ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</p>
+                                            </div>
+                                            <div class="tile-info-wrap">
+                                                <div class="tile-title-inner">19:28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-message status-readed">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-content-wrap">
+                                            <div class="tile-text-wrap">
+                                                <p>Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                    ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</p>
+                                            </div>
+                                            <div class="tile-info-wrap">
+                                                <div class="tile-title-inner">19:28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-message tile-att status-unreaded">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <img src="./img/user.jpg" alt="">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-content-wrap">
+                                            <div class="tile-text-wrap">
+                                                <p>Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                    ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</p>
+                                            </div>
+                                            <div class="tile-info-wrap">
+                                                <div class="tile-title-inner">19:28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-message status-readed">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-content-wrap">
+                                            <div class="tile-text-wrap">
+                                                <p>Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                    ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</p>
+                                            </div>
+                                            <div class="tile-info-wrap">
+                                                <div class="tile-title-inner">19:28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-message tile-att status-unreaded">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <img src="./img/user.jpg" alt="">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-content-wrap">
+                                            <div class="tile-text-wrap">
+                                                <p>Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                    ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</p>
+                                            </div>
+                                            <div class="tile-info-wrap">
+                                                <div class="tile-title-inner">19:28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-message status-readed">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-content-wrap">
+                                            <div class="tile-text-wrap">
+                                                <p>Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                    ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</p>
+                                            </div>
+                                            <div class="tile-info-wrap">
+                                                <div class="tile-title-inner">19:28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-message tile-att status-unreaded">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <img src="./img/user.jpg" alt="">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-content-wrap">
+                                            <div class="tile-text-wrap">
+                                                <p>Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                    ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</p>
+                                            </div>
+                                            <div class="tile-info-wrap">
+                                                <div class="tile-title-inner">19:28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--/lk-chat-box-->
+
+                    <!--lk-form-box-->
+                    <div class="lk-form-box section-message">
+                        <div class="box-inner-wrap">
+                            <div class="photo-inner-wrap">
+                                <div class="elm-photo photo-cover bg-att">
+                                    <div class="photo-user-title">МА</div>
+                                </div>
+                            </div>
+                            <form action="/" class="frm-inner-wrap">
+                                <div class="frm-row">
+                                    <div class="frm-field">
+                                        <div class="text-edit-box">
+                                            <div class="text-actions-wrap">
+                                                <div class="actions-wrap">
+                                                    <a href="" class="btn-action-ico">
+                                                        <img src="./img/icons/text-b.svg" alt="">
+                                                    </a>
+                                                    <a href="" class="btn-action-ico">
+                                                        <img src="./img/icons/text-i.svg" alt="">
+                                                    </a>
+                                                    <a href="" class="btn-action-ico">
+                                                        <img src="./img/icons/text-s.svg" alt="">
+                                                    </a>
+                                                    <a href="" class="btn-action-ico">
+                                                        <img src="./img/icons/text-u.svg" alt="">
+                                                    </a>
+                                                    <a href="" class="btn-action-ico">
+                                                        <img src="./img/icons/text-t.svg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="actions-wrap">
+                                                    <a href="" class="btn-action-ico">
+                                                        <img src="./img/icons/text-lh.svg" alt="">
+                                                    </a>
+                                                    <a href="" class="btn-action-ico">
+                                                        <img src="./img/icons/text-ar.svg" alt="">
+                                                    </a>
+                                                    <a href="" class="btn-action-ico">
+                                                        <img src="./img/icons/text-ac.svg" alt="">
+                                                    </a>
+                                                    <a href="" class="btn-action-ico">
+                                                        <img src="./img/icons/text-aj.svg" alt="">
+                                                    </a>
+                                                    <a href="" class="btn-action-ico">
+                                                        <img src="./img/icons/text-al.svg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="actions-wrap">
+                                                    <a href="" class="btn-action-ico">
+                                                        <img src="./img/icons/text-color.svg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="actions-wrap">
+                                                    <a href="" class="btn-action-ico">
+                                                        <img src="./img/icons/text-link.svg" alt="">
+                                                    </a>
+                                                    <a href="" class="btn-action-ico">
+                                                        <img src="./img/icons/text-file.svg" alt="">
+                                                    </a>
+                                                    <a href="" class="btn-action-ico">
+                                                        <img src="./img/icons/text-pic.svg" alt="">
+                                                    </a>
+                                                </div>
+                                                <a href="" class="btn-action-ico ico-arrow-down btn-action-toggle"></a>
+                                            </div>
+                                            <div class="text-content-wrap" contenteditable="true">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frm-row">
+                                    <div class="frm-field">
+                                        <div class="frm-field-attach js-field-file">
+                                            <input type="file" class="js-field-input">
+                                            <button type="button" class="button-attach js-file-button" data-title="Прикрепить документы">
+                                                <span class="button-title">Прикрепить документы</span>
+                                            </button>
+                                        </div>
+                                        <a href="" class="btn-action-ico button-form ico-add-lk"></a>
+                                    </div>
+                                </div>
+                                <div class="frm-row-submit">
+                                    <div class="frm-field field-submit-center">
+                                        <button type="submit" class="btn button-lk">Отправить</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--/lk-form-box-->
+
                 </div>
                 <!--/lk-content-wrap-->
 
                 <!--lk-side-wrap-->
                 <div class="lk-side-wrap">
-                    CONTENT
+
+                    <!--lk-list-box-->
+                    <div class="lk-list-box">
+                        <div class="lk-scroll-box">
+                            <div class="items-wrap">
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter active">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <img src="./img/user.jpg" alt="">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Михаил Михайлович Смирнов</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Вы</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-unreaded">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att-dark">
+                                                <img src="./img/user.jpg" alt="">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Михаил Михайлович Смирнов</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу –
+                                                мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att-dark">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Ивановский Иван</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу –
+                                                мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att-dark">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Ивановский Иван</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу –
+                                                мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att-dark">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Александр Сергеевич</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу –
+                                                мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Вы</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-unreaded">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <img src="./img/user.jpg" alt="">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Михаил Михайлович Смирнов</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу –
+                                                мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Ивановский Иван</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу –
+                                                мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Ивановский Иван</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу –
+                                                мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Александр Сергеевич</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу –
+                                                мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Вы</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-unreaded">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <img src="./img/user.jpg" alt="">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Михаил Михайлович Смирнов</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу –
+                                                мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Ивановский Иван</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу –
+                                                мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Ивановский Иван</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу –
+                                                мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Александр Сергеевич</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу –
+                                                мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Вы</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-unreaded">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу – мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <img src="./img/user.jpg" alt="">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Михаил Михайлович Смирнов</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу –
+                                                мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Ивановский Иван</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу –
+                                                мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Ивановский Иван</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу –
+                                                мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-letter">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-photo photo-cover bg-att">
+                                                <div class="photo-user-title">МА</div>
+                                            </div>
+                                            <div class="tile-title">Александр Сергеевич</div>
+                                            <div class="tile-title-info">19:28</div>
+                                        </div>
+                                        <div class="tile-info-wrap status-readed">
+                                            <div class="tile-info-text tile-many-lines">Вы в личном кабинете. Задайте вопрос или опишите свою задачу –
+                                                мы оценим работу и поможем выбрать тариф. У нас ночь, мы
+                                                ответим через 11 часов (в рабочее время отвечаем в течение 30 минут).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--/lk-list-box-->
+
                 </div>
                 <!--/lk-side-wrap-->
 

@@ -24,7 +24,7 @@ const swiperSliderTop = new Swiper('.slider-top .swiper', {
 const swiperSliderWorks = new Swiper('.slider-works .swiper', {
 	loop: true,
 	slidesPerView: 1,
-	spaceBetween: 0,
+spaceBetween: 0,
 	autoHeight: true,
 	speed: 400,
 	pagination: false,
